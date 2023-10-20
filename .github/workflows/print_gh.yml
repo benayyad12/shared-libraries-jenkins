@@ -1,0 +1,16 @@
+name: extract workflows data 
+
+on: push 
+   
+jobs:
+   print-message:
+      runs-on: macos-latest
+      steps:
+        - name: checkout-repo 
+          uses: actions/checkout@v2
+
+        - name: print 
+          run:  echo "Hello github actions"
+        
+         
+          
