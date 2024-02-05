@@ -1,16 +1,11 @@
-name: extract workflows data 
-
+name: check npm & node version
 on: push 
-   
-jobs:
-   print-message:
-      runs-on: macos-latest
+jobs: 
+    first-job: 
+      runs-on: ubuntu-latest
       steps:
-        - name: checkout-repo 
-          uses: actions/checkout@v2
-
-        - name: print 
-          run:  echo "Hello github actions I am here"
-        
+        - run:  node --version
+        - run:  npm --version
+                   -  
          
           
