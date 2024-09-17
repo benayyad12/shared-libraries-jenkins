@@ -1,16 +1,23 @@
 name: run spript bash
 on: [workflow_dispatch]
 jobs:
-     run_script:
+      job1:
           runs-on: ${{ matrix.os }}
           strategy:
             matrix:
-              os: [ubuntu-latest,windows-latest]
+              os: [ubuntu-latest]
           steps:
-            - name: checkout repository
-              uses: actions/checkout@v2
-
-            - name: run script bash 
-              run:  echo "heeeey"
+            - name: run script bash1
+              run:  echo heeeey
+      job2:
+          needs: job1
+          runs-on: ${{ matrix.os }}
+          strategy:
+            matrix:
+              os: [ubuntu-latest]
+          steps:
+            - name: run script bash2
+              run: echo salim
+      
              
           
