@@ -1,4 +1,4 @@
-name: check npm & node version
+name: check node version
 on: [workflow_dispatch]
 jobs: 
     build: 
@@ -15,7 +15,6 @@ jobs:
           with:
             node-version: ${{ matrix.node-version}}
             
-        - run:  node -v
-        - run:  npm -v
+          run:  node -v
          
           
