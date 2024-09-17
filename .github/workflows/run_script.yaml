@@ -4,7 +4,8 @@ jobs:
      run_script:
           runs-on: ${{ matrix.os }}
           strategy:
-             os: [ubuntu-latest,windows-latest]
+            matrix:
+              os: [ubuntu-latest,windows-latest]
           steps:
             - name: checkout repository
               uses: actions/checkout@v2
