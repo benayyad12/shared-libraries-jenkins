@@ -1,4 +1,4 @@
-def call() {
-  sh "echo hello world I m shared library from Github Repository"
+def call(String name,String dayOfTheWeek) {
+  sh "echo hello ${name}. It is ${dayOfTheWeek}"
 }
     
